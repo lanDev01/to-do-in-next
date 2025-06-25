@@ -1,0 +1,10 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"biome.languageModes": [
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact"
+	]
+}

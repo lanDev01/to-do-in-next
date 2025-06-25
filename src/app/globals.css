@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+	--purple: #ba83de;
+	--purple-light: #a378ff;
+
+	--shape: #1e1e1e;
+	--background: #ffffff;
+	--foreground: #020206;
+}
+
+@theme inline {
+	--color-purple: var(--purple);
+	--color-purple-light: var(--purple-light);
+
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-shape: var(--shape);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #020206;
+		--foreground: #ffffff;
+	}
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-roboto), sans-serif;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+	@apply ring-2 ring-purple ring-offset-2 outline-4 outline-transparent ring-offset-background;
+}
+
+.input-error {
+	@apply border border-red-500 ring-1 ring-red-500;
+}
